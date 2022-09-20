@@ -7,6 +7,7 @@ import Header from '../Header/Header';
 import Welcome from '../Welcome/Welcome';
 import About from '../About/About';
 import Skills from '../Skills/Skills';
+import Portfolio from '../Portfolio/Portfolio';
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -19,6 +20,7 @@ function App() {
       <Welcome />
       <About />
       <Skills />
+      <Portfolio />
     </div>
   );
 }
