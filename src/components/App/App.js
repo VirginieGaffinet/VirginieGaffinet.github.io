@@ -5,6 +5,7 @@ import { useState } from 'react';
 // import components
 import Header from '../Header/Header';
 import Welcome from '../Welcome/Welcome';
+import About from '../About/About';
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -15,6 +16,7 @@ function App() {
         setIsActive={setIsActive}
       />
       <Welcome />
+      <About />
     </div>
   );
 }
