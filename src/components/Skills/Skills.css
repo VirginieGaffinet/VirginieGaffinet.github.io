@@ -54,7 +54,7 @@
 .progress-bar {
   align-self: center;
   width: 30%;
-  height: 20px;
+  height: 10px;
   flex: 3 30%;
 }
 
