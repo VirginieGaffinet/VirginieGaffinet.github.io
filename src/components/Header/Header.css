@@ -24,6 +24,7 @@
 
 .show-burger-nav {
   background-color: var(--secondaryColor);
+  width: 100%;
 }
 
 
@@ -31,9 +32,13 @@
   font-size: calc(var(--fontSize) * 1.5);
   font-weight: var(--bold);
   align-self: center;
-  margin: calc(var(--gap));
+  margin: calc(var(--gap)) calc(var(--gap)) calc(var(--gap)) calc(var(--gap) /4);
   width: 100%;
   white-space: nowrap;
+}
+
+.logo-name-contains {
+  width: 52%;
 }
 
 
@@ -44,6 +49,7 @@
   }
 
   .logo-name {
+    margin-left: calc(var(--gap));
     font-size: calc(var(--fontSize) * 2);
   }
 }

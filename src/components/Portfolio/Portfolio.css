@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   color: var(--secondFontColor);
-  height: 1000px;
+  height: 810px;
   width: 100%;
 }
 
@@ -43,7 +43,9 @@
 
 /* for tablet */
 @media (min-width: 576px) {
-  
+  .portfolio-container-all {
+    height: 900px;
+  }
 }
 
 /* for small screen */
