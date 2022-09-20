@@ -1,0 +1,13 @@
+:root {
+  --gap : 2rem;
+  --fontSize : 1rem;
+  --fontColor : rgb(255, 255, 255);
+  --primaryColor : rgb(163,210,202);
+  --secondaryColor: #084846;
+  --thirdColor: #056676;
+  --border-width: 3px;
+  --bold: 700;
+  --secondFontColor: rgba(0, 0, 0, 0.69);
+  --boxShadow : rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --borderRadius : 1rem;
+}

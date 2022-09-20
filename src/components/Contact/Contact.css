@@ -1,0 +1,142 @@
+/* mobile first */
+.contact-container {
+  position: relative;
+  height: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondFontColor);
+}
+
+.contact-container::after {
+  content: "";
+  background: url(../../assets/images/contact.jpg) no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.contact-info {
+  margin: calc(var(--gap));
+}
+
+.contact-container-form, .form, .informations-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container-form {
+  background-color: rgba(163,210,202,0.80);
+  width: 90%;
+  height: 900px;
+  border-radius: var(--borderRadius);
+}
+
+.form {
+  width: 70%;
+  padding: calc(var(--gap));
+}
+
+.informations-container {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.information {
+  margin-bottom: calc(var(--gap) /2);
+  font-size: calc(var(--fontSize) *1.2);
+}
+
+
+.information >a:hover {
+  color: black;
+}
+
+.img-linkedin {
+  width: 50px;
+}
+
+.icon {
+  color: var(--secondFontColor);
+  margin-right: calc(var(--gap) /2);
+}
+
+.required {
+  margin-bottom: calc(var(--gap) /2);
+}
+
+.input {
+  margin-bottom: calc(var(--gap));
+  display: flex;
+  flex-direction: column;
+}
+
+.input >input, .input >textarea, .send-button {
+  padding: calc(var(--gap) /4);
+  border: 1px solid lightgrey;
+}
+
+.send-button {
+  cursor: pointer;
+  width: 50%;
+  color: var(--secondFontColor);
+  font-weight: var(--bold);
+  font-size: var(--fontSize);
+}
+
+.label {
+  margin-bottom: calc(var(--gap)/4);
+}
+
+/* for tablet */
+@media (min-width: 576px) {
+  
+}
+
+/* for small screen */
+@media (min-width: 768px) {
+  .contact-container-form {
+    flex-direction: row;
+  }
+
+  .form {
+    margin-right: calc(var(--gap));
+  }
+
+  .informations-container {
+    width: 60%;
+    padding: calc(var(--gap) /2);
+  }
+
+  .input >input, .input >textarea, .send-button {
+    padding: calc(var(--gap) /2);
+  }
+
+  .information {
+    margin-bottom: calc(var(--gap) *2);
+    font-size: calc(var(--fontSize) *1.2);
+  }
+}
+
+
+/* for screen */
+@media (min-width: 1200px) {
+  .contact-container-form {
+    width: 80%;
+  }
+  .information {
+    font-size: calc(var(--fontSize) *2);
+  }
+
+  .informations-container {
+    width: 70%;
+  } 
+}
