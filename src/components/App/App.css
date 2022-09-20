@@ -1,0 +1,35 @@
+/* mobile first */
+html {
+  scroll-behavior: smooth; 
+}
+
+.app {
+  position: relative;
+  font-family: 'Nunito Sans', sans-serif;
+  height: 100vh;
+  width: 100%;
+  font-size: var(--fontSize);
+  color: var(--fontColor);
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+
+/* for tablet */
+@media (min-width: 576px) {
+
+}
+
+/* for small screen */
+@media (min-width: 768px) {
+
+}
+
+
+/* for screen */
+@media (min-width: 1200px) {
+  
+}

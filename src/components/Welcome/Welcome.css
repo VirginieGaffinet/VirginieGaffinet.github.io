@@ -1,0 +1,132 @@
+.welcome-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondFontColor);
+}
+
+
+.welcome-container::after {
+  content: "";
+  background: url(../../assets/images/code-2.jpg) no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.welcome-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  height: 80px;
+  text-transform: uppercase;
+  background: rgb(53,	185,	207, 0.9);
+  border-radius: var(--border-width);
+  font-weight: var(--bold);
+  font-size: calc(var(--fontSize) * 1.5);
+  padding: calc(var(--gap) /2);
+  margin-bottom: calc(var(--gap));
+  overflow-wrap: break-word;
+}
+
+.welcome-title::after {
+  position: absolute;
+  content: "";
+  top: calc(-1 * var(--border-width));
+  left: calc(-1 * var(--border-width));
+  z-index: -1;
+  width: calc(100% + var(--border-width) * 2);
+  height: calc(100% + var(--border-width) * 2);
+  background: linear-gradient(
+    60deg,
+    hsl(224, 85%, 66%),
+    hsl(269, 85%, 66%),
+    hsl(314, 85%, 66%),
+    hsl(359, 85%, 66%),
+    hsl(44, 85%, 66%),
+    hsl(89, 85%, 66%),
+    hsl(134, 85%, 66%),
+    hsl(179, 85%, 66%)
+  );
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: calc(2 * var(--border-width));
+  animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.welcome-typing {
+  margin: calc(var(--gap));
+  text-align: justify;
+  letter-spacing: .15em;
+  font-weight: var(--bold)
+}
+
+.welcome-typing--animation {
+  border-right: .15em solid rgb(0, 0, 0);
+  animation: 
+  typing 4.5s steps(30, end),
+  blink-caret 1s step-end infinite;
+}
+
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(0, 0, 0); }
+}
+
+.welcome-location-container {
+  display: flex;
+}
+
+.city-name {
+  margin-left: calc(var(--gap) /2);
+}
+
+
+/* for tablet */
+@media (min-width: 576px) {
+
+}
+
+/* for small screen */
+@media (min-width: 768px) {
+  .welcome-container {
+    position: relative;
+    height: 600px;
+  }
+
+  .welcome-title {
+    margin-top: calc(var(--gap) *2);
+    font-size: calc(var(--fontSize) *2);
+    width: 600px;
+    height: 100px;
+  }
+
+  .welcome-typing {
+    white-space: nowrap; /* Keeps the content on a single line */
+  } 
+}
+
+/* for screen */
+@media (min-width: 1200px) {
+  
+}
