@@ -1,0 +1,102 @@
+/* mobile first */
+.skills-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--secondFontColor);
+  background: rgb(5,102,118);
+  background: linear-gradient(90deg, rgba(5,102,118,1) 0%, rgba(8,72,70,1) 30%, rgba(163,210,202,1) 59%);
+  /* height: 800px; */
+}
+
+.skills {
+  margin-top: calc(var(--gap));
+  width: 70%;
+  padding: calc(var(--gap));
+  box-shadow: var(--boxShadow);
+  background-color: white;
+  margin-bottom: calc(var(--gap));
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.skill-category {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: calc(var(--gap));
+}
+
+.skill-category-title {
+  font-size: calc(var(--fontSize) *1.5);
+  margin: calc(var(--gap) /2) 0 calc(var(--gap) /2) 0;
+  font-weight: var(--bold);
+}
+
+.logo {
+  width: 10%;
+  flex:1 10%;
+  margin-right: calc(var(--gap) /2);
+}
+
+.skill-name {
+  flex: 2 20%;
+  align-self: center;
+}
+
+
+.progress-bar {
+  align-self: center;
+  width: 30%;
+  height: 20px;
+  flex: 3 30%;
+}
+
+.progress-bar {
+  background-color: var(--primaryColor);
+  border: 0;
+  border-radius: 1rem;
+}
+.progress-bar::-webkit-progress-bar {
+  background-color: var(--primaryColor);
+  border: 0;
+  border-radius: 1rem;
+}
+.progress-bar::-webkit-progress-value {
+  background-color: var(--thirdColor);
+  border: 0;
+  border-radius: 1rem;
+}
+.progress-bar::-moz-progress-bar {
+  background-color: var(--primaryColor);
+  border: 0;
+  border-radius: 1rem;
+}
+
+/* for tablet */
+@media (min-width: 576px) {
+  
+}
+
+/* for small screen */
+@media (min-width: 768px) {
+  .progress-bar {
+    align-self: center;
+    width: 50%;
+    flex: 3 60%;
+  }
+  .skill {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+/* for screen */
+@media (min-width: 1200px) { 
+}

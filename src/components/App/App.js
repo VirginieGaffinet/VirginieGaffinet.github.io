@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Header from '../Header/Header';
 import Welcome from '../Welcome/Welcome';
 import About from '../About/About';
+import Skills from '../Skills/Skills';
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -17,6 +18,7 @@ function App() {
       />
       <Welcome />
       <About />
+      <Skills />
     </div>
   );
 }
