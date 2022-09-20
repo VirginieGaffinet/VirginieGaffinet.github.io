@@ -9,6 +9,7 @@ import About from '../About/About';
 import Skills from '../Skills/Skills';
 import Portfolio from '../Portfolio/Portfolio';
 import Contact from '../Contact/Contact';
+import Footer from '../Footer/Footer';
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -23,6 +24,7 @@ function App() {
       <Skills />
       <Portfolio />
       <Contact />
+      <Footer />
     </div>
   );
 }
