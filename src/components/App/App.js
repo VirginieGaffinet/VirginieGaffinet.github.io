@@ -13,6 +13,7 @@ import Footer from '../Footer/Footer';
 
 function App() {
   const [isActive, setIsActive] = useState(false);
+  const [isSend, setIsSend] = useState(false);
   return (
     <div className="app">
       <Header 
@@ -23,7 +24,10 @@ function App() {
       <About />
       <Skills />
       <Portfolio />
-      <Contact />
+      <Contact
+        isSend={isSend}
+        setIsSend={setIsSend}
+      />
       <Footer />
     </div>
   );

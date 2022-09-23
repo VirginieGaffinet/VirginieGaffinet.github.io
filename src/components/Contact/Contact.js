@@ -9,10 +9,24 @@ import linkedin from '../../assets/images/linkedin.png'
 import { useForm } from 'react-hook-form';
 // import emailjs
 import emailjs from 'emailjs-com';
+// import reCAPTCHA
+import ReCAPTCHA from "react-google-recaptcha";
+// import react
+import React, { useRef } from 'react';
 // import components
 import Separator from '../Reusable/Separator/Separator';
+import Modal from './Modal/Modal';
 
-function Contact() {
+function Contact({isSend, setIsSend}) {
+  const captchaRef = useRef(null);
+  console.log(process.env.REACT_APP_SITE_KEY)
+
+  // const handleSubmitCaptcha = (e) => {
+  //   e.preventDefault();
+  //   const token = captchaRef.current.getValue();
+  //   captchaRef.current.reset();
+  //   console.log(token);
+  // };
 
   const {
     register,
@@ -21,7 +35,7 @@ function Contact() {
     formState: { errors }
   } = useForm();
   
-  const onSubmit = async (data) => {
+  const onSubmit = async (data, e) => {
     const { lastName, firstName, email, subject, message } = data;
     try {
       const templateParams = {
@@ -37,7 +51,12 @@ function Contact() {
         templateParams,
         process.env.REACT_APP_USER_ID
       );
+      setIsSend(true)
       reset();
+      e.preventDefault();
+      const token = captchaRef.current.getValue();
+      captchaRef.current.reset();
+      console.log(token);
     } catch (e) {
       console.log(e);
     }
@@ -45,13 +64,20 @@ function Contact() {
 
   return (
     <div className='contact-container' id='contact'>
+      {isSend ? <Modal setIsSend={setIsSend}/> : ""}
+      
       <div className='contact-title'>
         <h3 className='title-nav'>Contact</h3>
         <Separator />
       </div>
       <p className='contact-info'>Pour plus de renseignements, n'hésitez pas à me contacter !</p>
       <div className='contact-container-form'>
-        <form action="" className='form' onSubmit={handleSubmit(onSubmit)} noValidate>
+        <form 
+          action="" 
+          className='form' 
+          onSubmit={handleSubmit(onSubmit)}
+          noValidate
+        >
           <p className='required'><span>*</span>Champs obligatoires</p>
           <div className='input'>
             <label htmlFor='lastname' className='label'>Nom*</label>
@@ -60,25 +86,24 @@ function Contact() {
               id='lastname' 
               name='lastName'
               {...register('lastName', {
-                required: { value: true, message: 'Please enter your name' },
+                required: { value: true, message: 'Veuillez entrer votre nom de famille' },
                 maxLength: {
                 value: 30,
                 message: 'Please use 30 characters or less'
                 }
               })} 
               placeholder="Votre nom" 
-              required
             />
-             {errors.lastName && <span className='errorMessage'>{errors.lastName.message}</span>}
+             {errors.lastName && <span className='error-message'>{errors.lastName.message}</span>}
           </div>
           <div className='input'>
-					  <label htmlFor='firstname' className='label'>Prénom</label>
+					  <label htmlFor='firstname' className='label'>Prénom*</label>
             <input 
               type="text" 
               id='firstname' 
               name='firstname'
               {...register('firstName', {
-                required: { value: true, message: 'Please enter your name' },
+                required: { value: true, message: 'Veuillez entrer votre prénom' },
                 maxLength: {
                 value: 30,
                 message: 'Please use 30 characters or less'
@@ -86,7 +111,7 @@ function Contact() {
               })} 
               placeholder="Votre prénom"
             />
-            {errors.firstName && <span className='errorMessage'>{errors.firstName.message}</span>}
+            {errors.firstName && <span className='error-message'>{errors.firstName.message}</span>}
           </div>
           <div className='input'>
             <label htmlFor='email' className='label'>E-mail*</label>
@@ -99,9 +124,8 @@ function Contact() {
                 pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
               })}
               placeholder="Votre e-mail"
-              required
             />
-            {errors.email && (<span className='errorMessage'>Please enter a valid email address</span>)}
+            {errors.email && (<span className='error-message'>Veuillez entrer une adresse e-mail valide</span>)}
           </div>
           <div className='input'>
 					  <label htmlFor='message' className='label'>Message*</label>
@@ -113,10 +137,14 @@ function Contact() {
               id='message' cols='20'
               rows='8' 
               placeholder="Laisser un message"
-              required>
+              >
             </textarea>
-            {errors.message && <span className='errorMessage'>Please enter a message</span>}
+            {errors.message && <span className='error-message'>Veuillez entrer un message</span>}
           </div>
+          <ReCAPTCHA 
+            sitekey={process.env.REACT_APP_SITE_KEY}
+            ref={captchaRef}
+          />
 					<input className='send-button' type="submit" value="Envoyer"/>
 				</form>
         <div className='informations-container'>

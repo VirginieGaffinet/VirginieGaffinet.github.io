@@ -44,6 +44,11 @@
   padding: calc(var(--gap));
 }
 
+.error-message {
+  margin-top: calc((var(--gap) /3));
+  color: rgb(171, 26, 26);
+}
+
 .informations-container {
   align-items: center;
   justify-content: center;
