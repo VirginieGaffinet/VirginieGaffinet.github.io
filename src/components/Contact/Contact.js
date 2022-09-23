@@ -9,25 +9,13 @@ import linkedin from '../../assets/images/linkedin.png'
 import { useForm } from 'react-hook-form';
 // import emailjs
 import emailjs from 'emailjs-com';
-// import reCAPTCHA
-import ReCAPTCHA from "react-google-recaptcha";
-// import react
-import React, { useRef } from 'react';
+
 // import components
 import Separator from '../Reusable/Separator/Separator';
 import Modal from './Modal/Modal';
 
 function Contact({isSend, setIsSend}) {
-  const captchaRef = useRef(null);
-  console.log(process.env.REACT_APP_SITE_KEY)
-
-  // const handleSubmitCaptcha = (e) => {
-  //   e.preventDefault();
-  //   const token = captchaRef.current.getValue();
-  //   captchaRef.current.reset();
-  //   console.log(token);
-  // };
-
+ 
   const {
     register,
     handleSubmit,
@@ -35,8 +23,8 @@ function Contact({isSend, setIsSend}) {
     formState: { errors }
   } = useForm();
   
-  const onSubmit = async (data, e) => {
-    const token = captchaRef.current.getValue();
+  const onSubmit = async (data) => {
+
     const { lastName, firstName, email, subject, message } = data;
     try {
       const templateParams = {
@@ -44,20 +32,16 @@ function Contact({isSend, setIsSend}) {
         firstName,
         email,
         subject,
-        message,
-        token
+        message
       };
       await emailjs.send(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         templateParams,
-        process.env.REACT_APP_USER_ID,
-        token
+        process.env.REACT_APP_USER_ID
       );
       setIsSend(true)
       reset();
-      e.preventDefault();
-      captchaRef.current.reset();
     } catch (e) {
       console.log(e);
     }
@@ -66,7 +50,6 @@ function Contact({isSend, setIsSend}) {
   return (
     <div className='contact-container' id='contact'>
       {isSend ? <Modal setIsSend={setIsSend}/> : ""}
-      
       <div className='contact-title'>
         <h3 className='title-nav'>Contact</h3>
         <Separator />
@@ -142,11 +125,11 @@ function Contact({isSend, setIsSend}) {
             </textarea>
             {errors.message && <span className='error-message'>Veuillez entrer un message</span>}
           </div>
-          <ReCAPTCHA 
-            sitekey={process.env.REACT_APP_SITE_KEY}
-            ref={captchaRef}
+					<input 
+            className='send-button' 
+            type="submit" 
+            value="Envoyer"
           />
-					<input className='send-button' type="submit" value="Envoyer"/>
 				</form>
         <div className='informations-container'>
           <div className='information'>
