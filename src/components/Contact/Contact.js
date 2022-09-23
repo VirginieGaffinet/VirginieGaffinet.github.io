@@ -36,6 +36,7 @@ function Contact({isSend, setIsSend}) {
   } = useForm();
   
   const onSubmit = async (data, e) => {
+    const token = captchaRef.current.getValue();
     const { lastName, firstName, email, subject, message } = data;
     try {
       const templateParams = {
@@ -43,20 +44,20 @@ function Contact({isSend, setIsSend}) {
         firstName,
         email,
         subject,
-        message
+        message,
+        token
       };
       await emailjs.send(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         templateParams,
-        process.env.REACT_APP_USER_ID
+        process.env.REACT_APP_USER_ID,
+        token
       );
       setIsSend(true)
       reset();
       e.preventDefault();
-      const token = captchaRef.current.getValue();
       captchaRef.current.reset();
-      console.log(token);
     } catch (e) {
       console.log(e);
     }
