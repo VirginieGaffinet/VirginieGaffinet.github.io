@@ -23,7 +23,7 @@ function App() {
       <Welcome />
       <About />
       <Skills />
-      <Portfolio />
+      <Portfolio/>
       <Contact
         isSend={isSend}
         setIsSend={setIsSend}

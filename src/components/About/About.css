@@ -77,7 +77,6 @@
   font-size: calc(var(--fontSize) /1.2);
 }
 
-
 .about-me, .my-image {
   margin-bottom: calc(var(--gap) /2);
 }
