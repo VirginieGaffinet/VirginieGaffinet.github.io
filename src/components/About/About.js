@@ -2,7 +2,7 @@ import './About.css';
 // import image
 import myImage from '../../assets/images/virginie1.jpg';
 // import pdf
-import MyCv from  '../../assets/pdf/cv.pdf';
+import myCV from '../../assets/pdf/CV-virginie-gaffinet.pdf'
 
 // import components
 import Separator from '../Reusable/Separator/Separator';
@@ -35,7 +35,7 @@ function About() {
         <p className='about-me'>35 ans</p>
         <p className='about-me'>Perpignan</p>
         <p className='about-me'>Hobbies : Tennis, informatique, jeux vidéo, musique</p>
-        <a href={MyCv} download="CV" className='my-cv'>
+        <a href={myCV} download="CV-Virginie-Gaffinet" className='my-cv'>
           <button className='upload-cv'>Télécharger mon CV</button>
         </a>
       </div>
