@@ -99,6 +99,11 @@ transition: all ease 2s;
   background-color: orange;
   padding: calc(var(--gap) /4);
   border-radius: var(--borderRadius);
+  cursor: default;
+}
+
+.portfolio-modalInfo-container >ul >li:hover {
+  filter: contrast(60%);
 }
 
 .portfolio-modalInfo-container >ul >li:last-child {
