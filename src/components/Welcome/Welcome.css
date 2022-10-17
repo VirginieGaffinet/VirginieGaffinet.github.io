@@ -75,9 +75,11 @@
 .welcome-typing {
   margin: calc(var(--gap));
   line-height: calc(var(--gap)/1.2);
+  word-wrap: break-word;
   /* text-align: justify; */
   /* letter-spacing: .15em; */
-  font-weight: var(--bold)
+  font-weight: var(--bold);
+  font-size: calc(var(--fontSize)*1.2);
 }
 
 .welcome-typing--animation {
@@ -123,7 +125,7 @@
   }
 
   .welcome-typing {
-    white-space: nowrap; /* Keeps the content on a single line */
+    font-size: calc(var(--fontSize)*1.5);
   } 
 }
 

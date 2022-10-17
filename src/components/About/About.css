@@ -153,8 +153,8 @@
   }
 
   .soft-skill {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     font-size: var(--fontSize);
   }
 
@@ -196,13 +196,13 @@
   .first-part-about-container {
     width: 50%;
     margin-right: calc(var(--gap));
-    height: 850px;
+    height: 920px;
   }
 
   .soft-skill {
-    width: 80px;
-    height: 80px;
-    font-size: calc(var(--fontSize)*1.3);
+    width: 70px;
+    height: 70px;
+    font-size: calc(var(--fontSize)*1.2);
   }
 
   .main-about {
