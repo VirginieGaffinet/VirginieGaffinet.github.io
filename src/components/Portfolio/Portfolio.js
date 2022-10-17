@@ -29,7 +29,6 @@ function Portfolio() {
                   className='portfolio-img'
                   onClick={() => {
                     setActive(name);
-                    console.log(name);
                   }}
                 > 
                 </img>
@@ -37,7 +36,7 @@ function Portfolio() {
                   className='img-button'
                   onClick={() => {
                     setActive(name);
-                    console.log(name);
+                    // console.log(name);
                   }}
                 >Voir plus</button>
               <div className={`portfolio-modalInfo ${active === name ? ' show-modal' : 'hide-modal'}`}>

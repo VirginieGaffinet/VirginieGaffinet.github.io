@@ -1,5 +1,7 @@
 // import css
 import './Contact.css';
+// import propTypes
+import PropTypes from 'prop-types';
 // fontawesome import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faHouseChimney, faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +17,7 @@ import Separator from '../Reusable/Separator/Separator';
 import Modal from './Modal/Modal';
 
 function Contact({isSend, setIsSend}) {
- 
+
   const {
     register,
     handleSubmit,
@@ -152,5 +154,10 @@ function Contact({isSend, setIsSend}) {
     </div>
   )
 };
+
+Contact.propTypes = {
+  isSend : PropTypes.bool,
+  setIsSend : PropTypes.func
+}
 
 export default Contact;

@@ -1,4 +1,6 @@
 import './Header.css';
+// import propTypes
+import PropTypes from 'prop-types';
 // hooks
 import { useEffect, useRef } from 'react';
 // import components
@@ -48,5 +50,10 @@ function Header({isActive, setIsActive}) {
       
     </div>
 )};
+
+Header.propTypes = {
+  isActive : PropTypes.bool,
+  setIsActive : PropTypes.func,
+}
 
 export default Header;

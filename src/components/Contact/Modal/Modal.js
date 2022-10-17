@@ -1,5 +1,7 @@
 // import css
 import './Modal.css';
+// import propTypes
+import PropTypes from 'prop-types';
 // fontawesome import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -20,5 +22,9 @@ function Modal({setIsSend}) {
     </div>
   )
 };
+
+Modal.propTypes = {
+  setTimeout : PropTypes.func,
+}
 
 export default Modal;

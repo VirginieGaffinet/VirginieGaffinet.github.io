@@ -1,5 +1,6 @@
 import './NavBar.css';
-
+// import propTypes
+import PropTypes from 'prop-types';
 function NavBar({isActive}) {
   return (
     <ul className={"nav-container" + (isActive ? " show-nav" : "")}>
@@ -11,5 +12,9 @@ function NavBar({isActive}) {
     </ul>
   )
 };
+
+NavBar.propTypes = {
+  isActive : PropTypes.bool,
+}
 
 export default NavBar;

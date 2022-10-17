@@ -1,4 +1,6 @@
 import './Burger.css';
+// import propTypes
+import PropTypes from 'prop-types';
 
 function Burger ({isActive, setIsActive}) {
   return (
@@ -11,6 +13,11 @@ function Burger ({isActive, setIsActive}) {
     <div className="bar3"></div>
   </div>
 )};
+
+Burger.propTypes = {
+  isActive : PropTypes.bool,
+  setIsActive : PropTypes.func,
+}
 
 export default Burger;
 
