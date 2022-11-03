@@ -5,6 +5,7 @@ import './Skills.css'
 import { skills_data_front } from '../../data/skillsData';
 import { skills_data_divers } from '../../data/skillsData';
 import { skills_data_back } from '../../data/skillsData';
+import { skills_data_cms } from '../../data/skillsData';
 
 // import components
 import Separator from '../Reusable/Separator/Separator';
@@ -29,6 +30,15 @@ function Skills() {
         <div className='skill'>
           <h4 className="skill-category-title">Back-End</h4>
           {skills_data_back.map(({skill, picture}) => (
+            <div className="skill-category" key={skill}>
+              <img src={picture} alt="logo" className='logo'></img>
+              <p className='skill-name'>{skill}</p>
+            </div>
+          ))}
+        </div>
+        <div className='skill skill-cms'>
+          <h4 className="skill-category-title">CMS</h4>
+          {skills_data_cms.map(({skill, picture}) => (
             <div className="skill-category" key={skill}>
               <img src={picture} alt="logo" className='logo'></img>
               <p className='skill-name'>{skill}</p>

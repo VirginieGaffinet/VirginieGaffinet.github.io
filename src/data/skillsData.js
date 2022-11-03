@@ -29,6 +29,13 @@ export const skills_data_back = [
   }
 ];
 
+export const skills_data_cms = [
+  {
+    skill: 'WordPress',
+    picture: require("../assets/images/wordPress.png")
+  }
+]
+
 export const skills_data_divers = [
   {
     skill: 'Bootstrap',
