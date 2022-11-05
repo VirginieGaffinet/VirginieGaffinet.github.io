@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.40823825.css",
-    "main.js": "/static/js/main.319ca01a.js",
+    "main.js": "/static/js/main.28cfc01d.js",
     "static/media/contact.jpg": "/static/media/contact.1287ccea2734d740744a.jpg",
     "static/media/code-2.jpg": "/static/media/code-2.64df6f405733aee1fe05.jpg",
     "static/media/virginie1.jpg": "/static/media/virginie1.8e50d302190e89bba7c9.jpg",
     "static/media/overview-citations.png": "/static/media/overview-citations.b4ff02773f2e7ab23e1e.png",
     "static/media/portfolio.png": "/static/media/portfolio.c191005863d9921b4d14.png",
     "static/media/ma-meteo.png": "/static/media/ma-meteo.4f76ee7f9ff0454228d0.png",
-    "static/media/CV-virginie-gaffinet.pdf": "/static/media/CV-virginie-gaffinet.c4336644892d0d0bed49.pdf",
+    "static/media/CV-virginie-gaffinet.pdf": "/static/media/CV-virginie-gaffinet.2e5204598d10205345bb.pdf",
     "static/media/wordPress.png": "/static/media/wordPress.ba022347ef9fa6801f2d.png",
     "static/media/vscode.png": "/static/media/vscode.a61dc62c499ed3aeefdc.png",
     "static/media/github.png": "/static/media/github.39e986cf3049d714012f.png",
@@ -21,10 +21,10 @@
     "static/media/mysql.png": "/static/media/mysql.1dc2631b700f5f1688c4.png",
     "index.html": "/index.html",
     "main.40823825.css.map": "/static/css/main.40823825.css.map",
-    "main.319ca01a.js.map": "/static/js/main.319ca01a.js.map"
+    "main.28cfc01d.js.map": "/static/js/main.28cfc01d.js.map"
   },
   "entrypoints": [
     "static/css/main.40823825.css",
-    "static/js/main.319ca01a.js"
+    "static/js/main.28cfc01d.js"
   ]
 }
