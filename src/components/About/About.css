@@ -19,6 +19,10 @@
   box-shadow: var(--boxShadow);
 }
 
+.about-dev {
+  font-weight: var(--bold);
+}
+
 .about-title {
   display: flex;
   flex-direction: column;
