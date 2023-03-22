@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.bd43a153.css",
-    "main.js": "/static/js/main.f2276a66.js",
+    "main.css": "/static/css/main.e02686c3.css",
+    "main.js": "/static/js/main.87752741.js",
     "static/media/contact.jpg": "/static/media/contact.1287ccea2734d740744a.jpg",
     "static/media/code-2.jpg": "/static/media/code-2.64df6f405733aee1fe05.jpg",
     "static/media/virginie1.jpg": "/static/media/virginie1.8e50d302190e89bba7c9.jpg",
     "static/media/overview-citations.png": "/static/media/overview-citations.b4ff02773f2e7ab23e1e.png",
     "static/media/portfolio.png": "/static/media/portfolio.c191005863d9921b4d14.png",
     "static/media/ma-meteo.png": "/static/media/ma-meteo.4f76ee7f9ff0454228d0.png",
-    "static/media/CV-virginie-gaffinet.pdf": "/static/media/CV-virginie-gaffinet.eef46c327bacb2deaf27.pdf",
     "static/media/wordPress.png": "/static/media/wordPress.ba022347ef9fa6801f2d.png",
+    "static/media/cv-Virginie-Gaffinet-referent-numerique.pdf": "/static/media/cv-Virginie-Gaffinet-referent-numerique.f6d57a09e39a1e0fd30f.pdf",
     "static/media/vscode.png": "/static/media/vscode.a61dc62c499ed3aeefdc.png",
     "static/media/github.png": "/static/media/github.39e986cf3049d714012f.png",
     "static/media/sass.png": "/static/media/sass.2e2618ef90e1d7132081.png",
@@ -20,11 +20,11 @@
     "static/media/react.png": "/static/media/react.44319306359c7112276d.png",
     "static/media/mysql.png": "/static/media/mysql.1dc2631b700f5f1688c4.png",
     "index.html": "/index.html",
-    "main.bd43a153.css.map": "/static/css/main.bd43a153.css.map",
-    "main.f2276a66.js.map": "/static/js/main.f2276a66.js.map"
+    "main.e02686c3.css.map": "/static/css/main.e02686c3.css.map",
+    "main.87752741.js.map": "/static/js/main.87752741.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd43a153.css",
-    "static/js/main.f2276a66.js"
+    "static/css/main.e02686c3.css",
+    "static/js/main.87752741.js"
   ]
 }
